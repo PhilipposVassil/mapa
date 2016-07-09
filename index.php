@@ -16,59 +16,59 @@
 				<td><b>Ισοπαλίες</b></td>
 				<td><b>Ήττες</b></td>
 			</tr>
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
+			<tr align="center">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
+			<tr align="center">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
+			<tr align="center">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
-			<tr>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
+			<tr align="center">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
-            <tr>
-                <td align="center"></td>
-                <td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
+            <tr align="center">
+                <td></td>
+                <td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
             </tr>
-            <tr>
-                <td align="center"></td>
-                <td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
+            <tr align="center">
+                <td></td>
+                <td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
             </tr>
 		</table>
 	</div>
