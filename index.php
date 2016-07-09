@@ -1,4 +1,8 @@
 <html>
+    <head>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
 	<div class="table" align="center">
 		<table border="1" width="350px" align="center">
 			<tr align="center">
@@ -7,7 +11,7 @@
 			<tr>
 				<td colspan="7">&nbsp;</td>
 			</tr>
-			<tr align="center">
+			<tr>
 				<td><b>&nbsp;</b></td>
 				<td><b>Ομάδα</b></td>
 				<td><b>Βαθμοί</b></td>
@@ -16,7 +20,7 @@
 				<td><b>Ισοπαλίες</b></td>
 				<td><b>Ήττες</b></td>
 			</tr>
-			<tr align="center">
+			<tr>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -25,7 +29,7 @@
 				<td></td>
 				<td></td>
 			</tr>
-			<tr align="center">
+			<tr>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -34,7 +38,7 @@
 				<td></td>
 				<td></td>
 			</tr>
-			<tr align="center">
+			<tr>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -43,7 +47,7 @@
 				<td></td>
 				<td></td>
 			</tr>
-			<tr align="center">
+			<tr>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -52,7 +56,7 @@
 				<td></td>
 				<td></td>
 			</tr>
-            <tr align="center">
+            <tr>
                 <td></td>
                 <td></td>
 				<td></td>
@@ -61,7 +65,7 @@
 				<td></td>
 				<td></td>
             </tr>
-            <tr align="center">
+            <tr>
                 <td></td>
                 <td></td>
 				<td></td>
@@ -72,4 +76,5 @@
             </tr>
 		</table>
 	</div>
+    </body>
 </html>
