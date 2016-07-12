@@ -34,7 +34,7 @@
                     {
                         echo "<tr>";
                             echo "<td>" .$row['id']. "</td>" ;
-                            echo "<td>" .$row['omades']. "</td>" ;
+                            echo "<td><a href=".$row['omades'].".php>" .$row['omades']. "</td>" ;
                             echo "<td>" .$row['agones']. "</td>" ;
                             echo "<td>" .$row['va8moi']. "</td>" ;
                             echo "<td>" .$row['nikes']. "</td>" ;
