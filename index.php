@@ -3,8 +3,8 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="table" align="center">
-            <table border="1" width="350px" align="center">
+        <div>
+            <table>
                 <tr>
                     <td colspan="7"><b>ΑΓΟΝΕΣ ΠΟΔΟΣΦΑΙΡΟΥ</b></td>
                 </tr>
