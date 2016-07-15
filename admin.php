@@ -9,4 +9,6 @@
 
 	//Select Database
 	$selected = mysqli_select_db($conn,$dbname) or die("Could not select $dbname");
+
+    mysqli_query($conn, "SET NAMES 'utf8'");
 ?>

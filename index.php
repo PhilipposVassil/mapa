@@ -1,12 +1,25 @@
-<html>
+<?php
+    include "admin.php";
+    $query = '' . 'SELECT * FROM omades ORDER BY va8moi DESC ';
+    $result = mysqli_query($conn, $query);
+    if (count($result)> 0) {
+        while($rows = mysqli_fetch_assoc($result)) {
+            $teams[]=$rows;
+        }
+    }
+?>
+<html lang="el">
+
     <head>
+		<meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
     </head>
+
     <body>
         <div>
             <table>
                 <tr>
-                    <td colspan="7"><b>ΑΓΟΝΕΣ ΠΟΔΟΣΦΑΙΡΟΥ</b></td>
+                    <td colspan="7"><b>ΑΓΩΝΕΣ ΠΟΔΟΣΦΑΙΡΟΥ</b></td>
                 </tr>
                 <tr>
                     <td colspan="7">&nbsp;</td>
@@ -20,29 +33,19 @@
                     <td><b>Ισοπαλίες</b></td>
                     <td><b>Ήττες</b></td>
                 </tr>
-                <?php
-                include "admin.php";
-                $query = '' . 'SELECT * FROM omades';
-                $result = mysqli_query($conn, $query);
-                if (count($result)> 0) {
-                    while($rows = mysqli_fetch_assoc($result)) {
-                        $teams[]=$rows;
-                    }
-                }
-                if (isset($teams)){
-                    foreach ($teams as $row)
-                    {
-                        echo "<tr>";
-                            echo "<td>" .$row['id']. "</td>" ;
-                            echo "<td><a href=".$row['omades'].".php>" .$row['omades']. "</td>" ;
-                            echo "<td>" .$row['agones']. "</td>" ;
-                            echo "<td>" .$row['va8moi']. "</td>" ;
-                            echo "<td>" .$row['nikes']. "</td>" ;
-                            echo "<td>" .$row['isopalies']. "</td>" ;
-                            echo "<td>" .$row['ittes']. "</td>" ;
-                        echo "</tr>";
-                    }
-                }?>
+
+
+                <?php foreach ($teams as $row): ?>
+                      <tr>
+                            <td><?php echo $row['id']; ?></td>
+                            <td><a href="showteam.php?id=<?php echo $row['id']; ?>"><?php echo  $row['name']; ?> </a></td>
+                            <td><?php echo $row['agones']; ?></td>
+                            <td><?php echo $row['va8moi']; ?></td>
+                            <td><?php echo $row['nikes']; ?></td>
+                            <td><?php echo $row['isopalies']; ?></td>
+                            <td><?php echo $row['ittes']; ?></td>
+                        </tr>
+                <?php endforeach; ?>
             </table>
         </div>
     </body>
