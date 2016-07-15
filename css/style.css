@@ -1,3 +1,40 @@
+/* ------- showteam.php style ------- */
+
+.container{
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    text-align: center;
+}
+
+.info{
+    padding-bottom: 15px;
+}
+
+.text{
+    padding-left: 30px;
+}
+
+
+img{
+    height: 180px;
+}
+
+div.question{
+    padding-top: 20px;
+}
+
+h3{
+    background-color: deepskyblue;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* ------- index.php style -------- */
+
 table, th, td {
     border: 1px solid black;
     text-align: center;

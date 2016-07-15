@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100113
 File Encoding         : 65001
 
-Date: 2016-07-12 20:23:15
+Date: 2016-07-15 03:30:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -21,22 +21,48 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `omades`;
 CREATE TABLE `omades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `omades` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `va8moi` int(10) DEFAULT NULL,
-  `agones` int(11) DEFAULT NULL,
-  `nikes` int(11) DEFAULT NULL,
-  `isopalies` int(11) DEFAULT NULL,
-  `ittes` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`,`omades`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `va8moi` int(10) NOT NULL,
+  `agones` int(11) NOT NULL,
+  `nikes` int(11) NOT NULL,
+  `isopalies` int(11) NOT NULL,
+  `ittes` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of omades
 -- ----------------------------
-INSERT INTO `omades` VALUES ('1', 'APOEL', '3', '1', '1', '0', '0');
-INSERT INTO `omades` VALUES ('2', 'Pafos', '2', '1', '0', '1', '0');
-INSERT INTO `omades` VALUES ('3', 'Anorthwsh', '3', '1', '1', '0', '0');
-INSERT INTO `omades` VALUES ('4', 'Apollwn', '1', '1', '0', '0', '1');
-INSERT INTO `omades` VALUES ('5', 'AEK Larnakas', '1', '1', '0', '0', '1');
-INSERT INTO `omades` VALUES ('6', 'Omonoia', '2', '1', '0', '1', '0');
+INSERT INTO `omades` VALUES ('1', 'ΑΝΟΡΘΩΣΗ', '3', '1', '1', '0', '0');
+INSERT INTO `omades` VALUES ('2', 'ΠΑΦΟΣ', '2', '1', '0', '1', '0');
+INSERT INTO `omades` VALUES ('3', 'ΑΠΟΕΛ', '3', '1', '1', '0', '0');
+INSERT INTO `omades` VALUES ('4', 'ΟΜΟΝΟΙΑ', '2', '1', '0', '1', '0');
+INSERT INTO `omades` VALUES ('5', 'ΑΠΟΛΛΩΝ', '1', '1', '0', '0', '1');
+INSERT INTO `omades` VALUES ('6', 'ΑΕΚ Λαρνακας', '1', '1', '0', '0', '1');
+
+-- ----------------------------
+-- Table structure for stixia
+-- ----------------------------
+DROP TABLE IF EXISTS `stixia`;
+CREATE TABLE `stixia` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `omada_id` int(11) NOT NULL,
+  `gipedo` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `topo8esia` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `Website` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `pic` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `foreign_stixia` (`omada_id`),
+  CONSTRAINT `foreign_stixia` FOREIGN KEY (`omada_id`) REFERENCES `omades` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of stixia
+-- ----------------------------
+INSERT INTO `stixia` VALUES ('1', '3', 'Νέο Στάδιο ΓΣΠ', 'Λευκωσία', 'http://www.apoelfc.com.cy/', 'img/APOEL.png');
+INSERT INTO `stixia` VALUES ('2', '1', 'Στάδιο Αντώνης Παπαδόπουλος', 'Λάρνακα', 'http://www.anorthosisfc.com.cy/', 'img/anw.png');
+INSERT INTO `stixia` VALUES ('3', '2', 'Παφιακό Στάδιο', 'Πάφος ', 'http://www.kerkida.net/articles/v-katigoria/eidiseis/pafos-fc', 'img/Pafos.png');
+INSERT INTO `stixia` VALUES ('4', '4', 'Νέο Στάδιο ΓΣΠ', 'Λευκωσία', 'https://omonoianews.com/', 'img/Omonia.png');
+INSERT INTO `stixia` VALUES ('5', '5', 'Τσίρειο Στάδιο', 'Λεμεσός', 'http://www.apollon.com.cy/gr/apollon-home', 'img/apollon.png');
+INSERT INTO `stixia` VALUES ('6', '6', 'Νέο ΓΣΖ', 'Λάρνακα', 'http://www.aek.com.cy/', 'img/AEK_Larnaca.png');
 SET FOREIGN_KEY_CHECKS=1;
