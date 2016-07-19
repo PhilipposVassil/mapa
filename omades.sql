@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100113
 File Encoding         : 65001
 
-Date: 2016-07-15 03:30:59
+Date: 2016-07-19 14:05:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -39,6 +39,42 @@ INSERT INTO `omades` VALUES ('3', 'ΑΠΟΕΛ', '3', '1', '1', '0', '0');
 INSERT INTO `omades` VALUES ('4', 'ΟΜΟΝΟΙΑ', '2', '1', '0', '1', '0');
 INSERT INTO `omades` VALUES ('5', 'ΑΠΟΛΛΩΝ', '1', '1', '0', '0', '1');
 INSERT INTO `omades` VALUES ('6', 'ΑΕΚ Λαρνακας', '1', '1', '0', '0', '1');
+
+-- ----------------------------
+-- Table structure for pextes
+-- ----------------------------
+DROP TABLE IF EXISTS `pextes`;
+CREATE TABLE `pextes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `omada_id` int(11) NOT NULL,
+  `onomatoeponimo` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `etos_genisis` int(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `foreign_pextes` (`omada_id`),
+  CONSTRAINT `foreign_pextes` FOREIGN KEY (`omada_id`) REFERENCES `omades` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of pextes
+-- ----------------------------
+INSERT INTO `pextes` VALUES ('1', '1', 'Γιάννης Οκκάς', '1977');
+INSERT INTO `pextes` VALUES ('2', '2', 'Αριστοτελους Γεωργιος', '1984');
+INSERT INTO `pextes` VALUES ('3', '3', 'Κωστάκης Αρτυματάς', '1993');
+INSERT INTO `pextes` VALUES ('4', '4', 'Γιώργος Σαββίδης', '1962');
+INSERT INTO `pextes` VALUES ('5', '5', 'Γιώργος Βασιλείου', '1984');
+INSERT INTO `pextes` VALUES ('6', '6', 'Αλέκος Αλέκου', '1983');
+INSERT INTO `pextes` VALUES ('7', '1', 'Ανδρέας Κίττου', '1996');
+INSERT INTO `pextes` VALUES ('8', '1', 'Ανδρέας Μακρής', '1996');
+INSERT INTO `pextes` VALUES ('9', '2', 'Γιάνις Κρούμινς', '1994');
+INSERT INTO `pextes` VALUES ('10', '2', 'Κάρλος Μάρκες', '1984');
+INSERT INTO `pextes` VALUES ('11', '3', 'Ανδρέας Παρασκευάς', '1998');
+INSERT INTO `pextes` VALUES ('12', '3', 'Νικόλας Ιωάννου', '1995');
+INSERT INTO `pextes` VALUES ('13', '4', 'Άρης Σοϊλέδης', '1991');
+INSERT INTO `pextes` VALUES ('14', '4', ' Λαουρέντιου Μπρανέσκου', '1994');
+INSERT INTO `pextes` VALUES ('15', '5', 'Μιχάλης Φανή', '1981');
+INSERT INTO `pextes` VALUES ('16', '5', 'Αγγελής Αγγελή', '1989');
+INSERT INTO `pextes` VALUES ('17', '6', 'Δημήτρης Κυπριανού', '1993');
+INSERT INTO `pextes` VALUES ('18', '6', 'Νίκος Εγγλέζου', '1994');
 
 -- ----------------------------
 -- Table structure for stixia

@@ -2,7 +2,8 @@
     include "admin.php";
     $query = '' . 'SELECT * FROM omades ORDER BY va8moi DESC ';
     $result = mysqli_query($conn, $query);
-    if (count($result)> 0) {
+    if (mysqli_num_rows($result)> 0) {
+        $counter=1;
         while($rows = mysqli_fetch_assoc($result)) {
             $teams[]=$rows;
         }
@@ -37,8 +38,8 @@
 
                 <?php foreach ($teams as $row): ?>
                       <tr>
-                            <td><?php echo $row['id']; ?></td>
-                            <td><a href="showteam.php?id=<?php echo $row['id']; ?>"><?php echo  $row['name']; ?> </a></td>
+                            <td><?php echo $counter++; ?></td>
+                            <td><a href="showteam.php?id=<?php echo $row['id']; ?>"><?php echo $row['name']; ?> </a></td>
                             <td><?php echo $row['agones']; ?></td>
                             <td><?php echo $row['va8moi']; ?></td>
                             <td><?php echo $row['nikes']; ?></td>

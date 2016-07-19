@@ -1,14 +1,24 @@
 <?php
-include "admin.php";
-$pextes = $_GET['id'];
+    include "admin.php";
+    $omadaID = $_GET['id'];
 
-$team = "" . "SELECT omades.name FROM stixia join omades on omades.id=stixia.omada_id where omades.id ='$pextes'";
-$result1 = mysqli_query($conn, $team);
-$team_name=mysqli_fetch_assoc($result1);
+    $team = "" . "SELECT omades.name FROM stixia join omades on omades.id=stixia.omada_id where omades.id ='$omadaID'";
+    $result1 = mysqli_query($conn, $team);
+    $team_name=mysqli_fetch_assoc($result1);
 
-$info = "" . "SELECT gipedo,topo8esia,website,pic FROM stixia where omada_id='$pextes'";
-$result2 = mysqli_query($conn, $info);
-$team_info=mysqli_fetch_assoc($result2);
+    $info = "" . "SELECT gipedo,topo8esia,website,pic FROM stixia where omada_id='$omadaID'";
+    $result2 = mysqli_query($conn, $info);
+    $team_info=mysqli_fetch_assoc($result2);
+
+    $query1 = "" . "SELECT pextes.onomatoeponimo, pextes.etos_genisis FROM pextes join omades on omades.id=pextes.omada_id where omades.id ='$omadaID'";
+    $result3 = mysqli_query($conn, $query1);
+
+    if (mysqli_num_rows($result3)> 0) {
+        $playerData = array();
+        while($rows1 = mysqli_fetch_assoc($result3)) {
+            $playerData[]=$rows1;
+        }
+    }
 ?>
 
 <html lang="el">
@@ -60,6 +70,26 @@ $team_info=mysqli_fetch_assoc($result2);
                         <a href="<?php echo $team_info['website']; ?>"><?php echo $team_info['website']; ?></a>
                     </span>
                 </div>
+            </div>
+
+            <h3>
+                Ποδοσφαιριστές
+            </h3>
+
+            <div>
+                <table>
+                    <tr>
+                        <td><b>Ονοματεπώνυμο</b></td>
+                        <td><b>Έτος Γέννησης</b></td>
+                    </tr>
+
+                    <?php foreach ($playerData as $row): ?>
+                          <tr>
+                                <td><?php echo $row['onomatoeponimo']; ?> </a></td>
+                                <td><?php echo $row['etos_genisis']; ?></td>
+                          </tr>
+                    <?php endforeach; ?>
+                </table>
             </div>
         </div>
     </body>
